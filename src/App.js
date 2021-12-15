@@ -11,7 +11,7 @@ class App extends React.Component {
 
   updateSource(source, name) {
     this.setState({
-      source: sour,
+      source: source,
       sourceName: name,
     });
   }
