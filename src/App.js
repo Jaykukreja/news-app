@@ -1,12 +1,35 @@
-import './App.css';
+import React from "react";
+import "./App.css";
+import { Sources } from "./components/Sources";
 import Navbar from "./components/Navbar";
 
-function App() {
+class App extends React.Component {
+  constructor() {
+    super();
+    this.state = {};
+  }
+
+  updateSource(source, name) {
+    this.setState({
+      source: sour,
+      sourceName: name,
+    });
+  }
+
+  render() {
     return (
-        <>
-            <Navbar />
-        </>
+      <>
+        <Navbar />
+        <div className="jumbotron-fluid">
+          <div className="row">
+            <div className="col-sm-4">
+              <Sources updateSource={this.updateSource.bind(this)} />
+            </div>
+          </div>
+        </div>
+      </>
     );
+  }
 }
 
 export default App;
